@@ -53,6 +53,6 @@ External and local links to your cloudflare tunnels. Theme is consistant with in
 - `CLOUDFLARE_API_KEY` - Cloudflare API Key
 
 ## Assets
-Upload to your glance `assets` folder.
+Upload to your Luna `assets` folder.
 
 1. <a href="link-down-right.png"><img src="link-down-right.png" width="auto" height="20px" />img/link-down-right.png</a> file

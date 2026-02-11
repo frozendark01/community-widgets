@@ -67,12 +67,12 @@ Customisation can be applied using the `options:` field. See [Options](#options)
 * `AUDIOBOOKSHELF_KEY` - The AudioBookshelf API key, available in `Settings` -> `API Keys`
 
 ## Secrets
-Since `v0.8.0`, you can use Docker secrets instead of environment variables. See [v0.8.0 Release Notes](https://github.com/glanceapp/glance/releases/tag/v0.8.0#g-rh-5) for more information.
+Since `v0.8.0`, you can use Docker secrets instead of environment variables. See [v0.8.0 Release Notes](https://github.com/frozendark01/Luna/releases/tag/v0.8.0#g-rh-5) for more information.
 If you do, replace `${YOUR_API_KEY}` with `${secret:your-api-key-secret}`.
 
 ## Options
 Since `v0.8.0`, you can use the `options:` field to customise the widget.
-See [v0.8.0 Release Notes](https://github.com/glanceapp/glance/releases/tag/v0.8.0#g-rh-15) for more information.
+See [v0.8.0 Release Notes](https://github.com/frozendark01/Luna/releases/tag/v0.8.0#g-rh-15) for more information.
 
 > [!CAUTION]
 >
@@ -293,5 +293,5 @@ options:
 ## 🍻 Cheers
 
 * [titembaatar](https://github.com/titembaatar) - For the [Media Server
-  History](https://github.com/glanceapp/community-widgets/tree/main/widgets/media-server-history)
+  History](https://github.com/frozendark01/community-widgets/tree/main/widgets/media-server-history)
   widget that much of this was based on.

@@ -70,7 +70,7 @@ Add the following configuration to your `home.yml` file:
 ```
 
 > [!WARNING]  
-> If you're using self-signed TLS certificates with Glance, make sure to include these lines in your `docker-compose.yml`:
+> If you're using self-signed TLS certificates with Luna, make sure to include these lines in your `docker-compose.yml`:
 ```yaml
     volumes:
       - ./config:/app/config

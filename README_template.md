@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-A collection of custom widgets for <a href="https://github.com/glanceapp/glance">Glance</a> made by the<br> community using the <code>custom-api</code> and <code>extension</code> widgets
+A collection of custom widgets for <a href="https://github.com/frozendark01/Luna">Luna</a> made by the<br> community using the <code>custom-api</code> and <code>extension</code> widgets
 </p>
 
 <br>
@@ -34,7 +34,7 @@ A collection of custom widgets for <a href="https://github.com/glanceapp/glance"
 ## Extension Widgets
 > [!WARNING]
 >
-> Extension widgets are not actively monitored by the maintainers of Glance, use them at your own risk.
+> Extension widgets are not actively monitored by the maintainers of Luna, use them at your own risk.
 {{- range .ExtensionsSortedByTitle }}
 * [{{ .Title }}]({{ .URL }}) - {{ .Description | toLowerFirst | trimSuffix "." }}{{ if .Author }} (by @{{ .Author }}){{ end }}
 {{- end }}
@@ -42,9 +42,9 @@ A collection of custom widgets for <a href="https://github.com/glanceapp/glance"
 <br>
 
 ## How to use
-For simpler widgets you can simply copy their code into your `glance.yml` as you would with any other widget, then add environment variables for any URL's and API keys if necessary.
+For simpler widgets you can simply copy their code into your `Luna.yml` as you would with any other widget, then add environment variables for any URL's and API keys if necessary.
 
-For more complex widgets that span across hundreds of lines, it may be trickier to get their indentation right, so it's easier to place them in a separate `yml` file, configure them there, then include that file in your `glance.yml` like such:
+For more complex widgets that span across hundreds of lines, it may be trickier to get their indentation right, so it's easier to place them in a separate `yml` file, configure them there, then include that file in your `Luna.yml` like such:
 
 ```yml
 widgets:
@@ -57,7 +57,7 @@ widgets:
 <details>
 <summary><strong>Are the widgets maintained?</strong></summary>
 
-The maintainers of Glance are not responsible for the maintenance of these widgets. Instead, the author of each widget is responsible for maintaining and responding to issues and pull requests related to that widget.
+The maintainers of Luna are not responsible for the maintenance of these widgets. Instead, the author of each widget is responsible for maintaining and responding to issues and pull requests related to that widget.
 </details>
 
 <details>
@@ -69,5 +69,5 @@ Custom API widgets are much easier to setup and usually only require a copy-past
 <details>
 <summary><strong>Are the widgets safe to use?</strong></summary>
 
-The `custom-api` widgets in this repository have been vetted by the maintainers of Glance so they are safe to use, however they may still have bugs, be visually inconsistent with the rest of Glance, or in some cases have poor performance.
+The `custom-api` widgets in this repository have been vetted by the maintainers of Luna so they are safe to use, however they may still have bugs, be visually inconsistent with the rest of Luna, or in some cases have poor performance.
 </details>

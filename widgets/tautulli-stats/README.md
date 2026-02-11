@@ -678,7 +678,7 @@ For feature requests or issues, contact @SleebySky on the project's Discord serv
 ### Options
 - `size` - Set to "small" for small version, "full" version.
 - `collapse` - Set the number of items shown by default in "small" mode before showing 'show more.'
-- `filter` - Icons come from plex as pure white SVGs, so cannot automatically use your default glance styling. To change the color of the icons, use the following [website](https://cssfilterconverter.com/), to input your hex code and get out the necessary CSS filter string. 
+- `filter` - Icons come from plex as pure white SVGs, so cannot automatically use your default Luna styling. To change the color of the icons, use the following [website](https://cssfilterconverter.com/), to input your hex code and get out the necessary CSS filter string. 
 
 ### Environment Variables
 - `TAUTULLI_IP` - local ip address of your tautulli instance

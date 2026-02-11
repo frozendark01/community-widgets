@@ -1,7 +1,7 @@
 ## Introduction
 
 This widget mimics the style of the builtin
-[Server Stats](https://github.com/glanceapp/glance/blob/main/docs/configuration.md#server-stats)
+[Server Stats](https://github.com/frozendark01/Luna/blob/main/docs/configuration.md#server-stats)
 widget, but it pulls the data from a [Beszel](https://github.com/henrygd/beszel)
 instance instead. The collected data is about the same, but it means needing to
 run one less container if you already have beszel running to monitor your
@@ -42,13 +42,13 @@ curl -X POST "http://IP:PORT/api/collections/users/auth-with-password" \
 
 ## Secrets
 
-Since `v0.8.0`, you can use Docker secrets instead of environment variables. See [v0.8.0 Release Notes](https://github.com/glanceapp/glance/releases/tag/v0.8.0#g-rh-5) for more information.
+Since `v0.8.0`, you can use Docker secrets instead of environment variables. See [v0.8.0 Release Notes](https://github.com/frozendark01/Luna/releases/tag/v0.8.0#g-rh-5) for more information.
 If you do, replace `${YOUR_API_KEY}` with `${secret:your-api-key-secret}`.
 
 ## Options
 
 Since `v0.8.0`, you can use the `options:` field to customise the widget.
-See [v0.8.0 Release Notes](https://github.com/glanceapp/glance/releases/tag/v0.8.0#g-rh-15) for more information.
+See [v0.8.0 Release Notes](https://github.com/frozendark01/Luna/releases/tag/v0.8.0#g-rh-15) for more information.
 
 Default options are:
 
@@ -315,6 +315,6 @@ options:
 ## 🍻 Cheers
 
 * [panonim](https://github.com/panonim) - For the [Beszel
-  Metrics](https://github.com/glanceapp/community-widgets/blob/main/widgets/beszel-metrics/README.md)
+  Metrics](https://github.com/frozendark01/community-widgets/blob/main/widgets/beszel-metrics/README.md)
   widget which showed me how to use the Beszel API.
   widget that much of this was based on.

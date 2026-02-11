@@ -2,7 +2,7 @@
 
 ![RomM Widget Preview](https://github.com/milktoastrat/community-widgets/blob/main/widgets/retroachievement-of-the-week/retroachievement-of-the-week-example.png?raw=true)
 
-A custom Glance widget that displays the current [RetroAchievements.org](https://retroachievements.org) "Achievement of the Week" — with full support for badge, game title, description, and links to view the achievement and game on RA.
+A custom Luna widget that displays the current [RetroAchievements.org](https://retroachievements.org) "Achievement of the Week" — with full support for badge, game title, description, and links to view the achievement and game on RA.
 
 
 ```yaml
@@ -40,7 +40,7 @@ A custom Glance widget that displays the current [RetroAchievements.org](https:/
 ### Setup
 
 1. **Get an API key** from [RetroAchievements Settings](https://retroachievements.org/settings) or your RA account settings.
-2. Add a secret in your Glance `.env` file:
+2. Add a secret in your Luna `.env` file:
 
    ```env
    RA_API=your_api_key_here

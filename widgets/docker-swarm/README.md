@@ -1,6 +1,6 @@
 # Docker Swarm Monitor
 
-A comprehensive Docker Swarm monitoring widget for Glance that displays node status and service health with support for service grouping based on the built-in docker-containers widget.
+A comprehensive Docker Swarm monitoring widget for Luna that displays node status and service health with support for service grouping based on the built-in docker-containers widget.
 
 ![Docker Swarm Widget](screenshot.png)
 
@@ -8,7 +8,7 @@ A comprehensive Docker Swarm monitoring widget for Glance that displays node sta
 
 - **Node Monitoring**: Display all Swarm nodes with their status, role, and availability
 - **Service Monitoring**: Track service replica status and health
-- **Parent/Child Service Grouping**: Organize related services using `glance.id` and `glance.parent` labels
+- **Parent/Child Service Grouping**: Organize related services using `Luna.id` and `Luna.parent` labels
 - **Customizable Colors**: Adjust section header colors via template variables
 - **Icon Support**: Multiple icon prefixes supported (si:, di:, sh:, mdi:)
 - **Deployment Mode Display**: Shows replica counts (1/1) or "global" for global services
@@ -19,26 +19,26 @@ A comprehensive Docker Swarm monitoring widget for Glance that displays node sta
 
 - Docker Swarm cluster (single or multi-node)
 - [Tecnativa's docker-socket-proxy](https://github.com/Tecnativa/docker-socket-proxy) for secure Docker API access
-- Glance dashboard
+- Luna dashboard
 
 ## Installation
 
 ### 1. Deploy Docker Socket Proxy
 
-Add the following service in your current `glance` Docker Swarm or `docker-compose.yml` file
+Add the following service in your current `Luna` Docker Swarm or `docker-compose.yml` file
 
 ```yaml
 version: '3.8'
 
 services:
-  glance:
-    image: glanceapp/glance
+  Luna:
+    image: frozendark01/Luna
     networks:
-      - glance-docker-api   # Must have the same network attached
-    # ---- Rest of your glance service ----
+      - Luna-docker-api   # Must have the same network attached
+    # ---- Rest of your Luna service ----
 
   # docker-swarm-proxy service to be added
-  glance-docker-swarm-proxy:
+  Luna-docker-swarm-proxy:
     image: tecnativa/docker-socket-proxy
     environment:
       - LOG_LEVEL=info
@@ -56,7 +56,7 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro
     networks:
-      - glance-docker-api # Must have the same network attached
+      - Luna-docker-api # Must have the same network attached
     deploy:
       mode: replicated
       replicas: 1
@@ -66,7 +66,7 @@ services:
 
 # === Networks ===
 networks:
-  glance-docker-api:
+  Luna-docker-api:
     driver: overlay
     internal: true
 ```
@@ -74,22 +74,22 @@ networks:
 Deploy with:
 
 ```sh
-docker stack deploy -c docker-compose.yml glance-stack
+docker stack deploy -c docker-compose.yml Luna-stack
 ```
 
 
-### 2. Configure Glance
+### 2. Configure Luna
 
-Add the widget to your `glance.yml`:
+Add the widget to your `Luna.yml`:
 
 ```yaml
 - type: custom-api
   title: Docker Swarm
-  url: http://glance-docker-swarm-proxy:2375/services ## CHANGE THIS TO MATCH YOUR SETUP
+  url: http://Luna-docker-swarm-proxy:2375/services ## CHANGE THIS TO MATCH YOUR SETUP
   cache: 1m
   template: |
     {{/* Define base URL and colors as template variables - CHANGE THIS TO MATCH YOUR SETUP */}}
-    {{ $baseURL := "http://glance-docker-swarm-proxy:2375" }}
+    {{ $baseURL := "http://Luna-docker-swarm-proxy:2375" }}
     {{ $nodesColor := "204 93 53" }}
     {{ $servicesColor := "147 64 44" }}
     
@@ -248,11 +248,11 @@ Add the widget to your `glance.yml`:
       }}
       
       {{ if eq $details.Response.StatusCode 200 }}
-        {{ $name := $details.JSON.String "Spec.Labels.glance\\.name" }}
-        {{ $glanceParent := $details.JSON.String "Spec.Labels.glance\\.parent" }}
+        {{ $name := $details.JSON.String "Spec.Labels.Luna\\.name" }}
+        {{ $LunaParent := $details.JSON.String "Spec.Labels.Luna\\.parent" }}
         
         {{/* Only count if not a child service */}}
-        {{ if and $name (not $glanceParent) }}
+        {{ if and $name (not $LunaParent) }}
           {{ $totalServices = add $totalServices 1 }}
           
           {{ $isGlobal := $details.JSON.Exists "Spec.Mode.Global" }}
@@ -296,7 +296,7 @@ Add the widget to your `glance.yml`:
           {{ $nodeAvailability := .String "Spec.Availability" }}
           {{ $isLeader := .Bool "ManagerStatus.Leader" }}
           
-          {{/* Fetch node details for glance labels */}}
+          {{/* Fetch node details for Luna labels */}}
           {{
             $nodeDetails := newRequest (concat $baseURL "/nodes/" $nodeID)
               | getResponse
@@ -304,7 +304,7 @@ Add the widget to your `glance.yml`:
           
           {{ $nodeIcon := "" }}
           {{ if eq $nodeDetails.Response.StatusCode 200 }}
-            {{ $nodeIcon = $nodeDetails.JSON.String "Spec.Labels.glance\\.icon" }}
+            {{ $nodeIcon = $nodeDetails.JSON.String "Spec.Labels.Luna\\.icon" }}
           {{ end }}
           
           {{ $statusClass := "warn" }}
@@ -423,15 +423,15 @@ Add the widget to your `glance.yml`:
         }}
         
         {{ if eq $details.Response.StatusCode 200 }}
-          {{ $name := $details.JSON.String "Spec.Labels.glance\\.name" }}
-          {{ $glanceParent := $details.JSON.String "Spec.Labels.glance\\.parent" }}
+          {{ $name := $details.JSON.String "Spec.Labels.Luna\\.name" }}
+          {{ $LunaParent := $details.JSON.String "Spec.Labels.Luna\\.parent" }}
           
           {{/* Only display if not a child service */}}
-          {{ if and $name (not $glanceParent) }}
-            {{ $glanceID := $details.JSON.String "Spec.Labels.glance\\.id" }}
-            {{ $icon := $details.JSON.String "Spec.Labels.glance\\.icon" }}
-            {{ $url := $details.JSON.String "Spec.Labels.glance\\.url" }}
-            {{ $description := $details.JSON.String "Spec.Labels.glance\\.description" }}
+          {{ if and $name (not $LunaParent) }}
+            {{ $LunaID := $details.JSON.String "Spec.Labels.Luna\\.id" }}
+            {{ $icon := $details.JSON.String "Spec.Labels.Luna\\.icon" }}
+            {{ $url := $details.JSON.String "Spec.Labels.Luna\\.url" }}
+            {{ $description := $details.JSON.String "Spec.Labels.Luna\\.description" }}
             {{ $isGlobal := $details.JSON.Exists "Spec.Mode.Global" }}
             {{ $desired := $details.JSON.String "Spec.Mode.Replicated.Replicas" }}
             
@@ -524,8 +524,8 @@ Add the widget to your `glance.yml`:
                     <div class="margin-top-10 size-h5">{{ $description }}</div>
                   {{ end }}
                   
-                  {{/* Display child services if this service has glance.id */}}
-                  {{ if $glanceID }}
+                  {{/* Display child services if this service has Luna.id */}}
+                  {{ if $LunaID }}
                     {{ $hasChildren := false }}
                     {{ range $.JSON.Array "" }}
                       {{ $childServiceID := .String "ID" }}
@@ -534,8 +534,8 @@ Add the widget to your `glance.yml`:
                           | getResponse
                       }}
                       {{ if eq $childDetails.Response.StatusCode 200 }}
-                        {{ $childParent := $childDetails.JSON.String "Spec.Labels.glance\\.parent" }}
-                        {{ if eq $childParent $glanceID }}
+                        {{ $childParent := $childDetails.JSON.String "Spec.Labels.Luna\\.parent" }}
+                        {{ if eq $childParent $LunaID }}
                           {{ $hasChildren = true }}
                         {{ end }}
                       {{ end }}
@@ -552,10 +552,10 @@ Add the widget to your `glance.yml`:
                               | getResponse
                           }}
                           {{ if eq $childDetails.Response.StatusCode 200 }}
-                            {{ $childParent := $childDetails.JSON.String "Spec.Labels.glance\\.parent" }}
-                            {{ if eq $childParent $glanceID }}
-                              {{ $childName := $childDetails.JSON.String "Spec.Labels.glance\\.name" }}
-                              {{ $childIcon := $childDetails.JSON.String "Spec.Labels.glance\\.icon" }}
+                            {{ $childParent := $childDetails.JSON.String "Spec.Labels.Luna\\.parent" }}
+                            {{ if eq $childParent $LunaID }}
+                              {{ $childName := $childDetails.JSON.String "Spec.Labels.Luna\\.name" }}
+                              {{ $childIcon := $childDetails.JSON.String "Spec.Labels.Luna\\.icon" }}
                               
                               {{/* Get child status */}}
                               {{ $childIsGlobal := $childDetails.JSON.Exists "Spec.Mode.Global" }}
@@ -701,7 +701,7 @@ Add the widget to your `glance.yml`:
 Edit the template variables at the top (line 8-10):
 
 ```yaml
-{{ $baseURL := "http://glance-docker-swarm-proxy:2375" }} # Change if needed
+{{ $baseURL := "http://Luna-docker-swarm-proxy:2375" }} # Change if needed
 {{ $nodesColor := "139 92 46" }} # HSL color for Nodes section
 {{ $servicesColor := "204 93 53" }} # HSL color for Services section
 ```
@@ -715,10 +715,10 @@ Add these labels to your Docker Swarm services:
 ```yaml
 deploy:
   labels:
-    - "glance.name=My Service" # Display name (required)
-    - "glance.icon=sh:plex" # Icon (optional)
-    - "glance.url=https://myservice.example.com" # Service URL (optional)
-    - "glance.description=My service description" # Description (optional)
+    - "Luna.name=My Service" # Display name (required)
+    - "Luna.icon=sh:plex" # Icon (optional)
+    - "Luna.url=https://myservice.example.com" # Service URL (optional)
+    - "Luna.description=My service description" # Description (optional)
 ```
 
 ### Icon Prefixes
@@ -742,9 +742,9 @@ Group related services together:
 ```yaml
 deploy:
   labels:
-    - "glance.name=Plex"
-    - "glance.id=plex-stack" # Unique identifier
-    - "glance.icon=sh:plex"
+    - "Luna.name=Plex"
+    - "Luna.id=plex-stack" # Unique identifier
+    - "Luna.icon=sh:plex"
 ```
 
 **Child Services:**
@@ -752,9 +752,9 @@ deploy:
 ```yaml
 deploy:
   labels:
-    - "glance.name=Overseerr"
-    - "glance.parent=plex-stack" # Reference to parent ID
-    - "glance.icon=sh:overseerr"
+    - "Luna.name=Overseerr"
+    - "Luna.parent=plex-stack" # Reference to parent ID
+    - "Luna.icon=sh:overseerr"
 ```
 
 Child services will:
@@ -768,14 +768,14 @@ Child services will:
 Optionally customize node icons:
 
 ```sh
-docker node update --label-add glance.icon=mdi:server <node-name>
+docker node update --label-add Luna.icon=mdi:server <node-name>
 ```
 
 ## Configuration Options
 
 | Variable | Default | Description |
 |----------|---------|-------------|
-| `$baseURL` | `http://glance-docker-swarm-proxy:2375` | Docker API endpoint |
+| `$baseURL` | `http://Luna-docker-swarm-proxy:2375` | Docker API endpoint |
 | `$nodesColor` | `139 92 46` | HSL color for Nodes header |
 | `$servicesColor` | `204 93 53` | HSL color for Services header |
 
@@ -811,7 +811,7 @@ Parent services show related child services when hovering over the icon, creatin
 
 ### Services not appearing
 
-Check that services have the `glance.name` label:
+Check that services have the `Luna.name` label:
 
 ```sh
 docker service inspect <service-name> --format '{{json .Spec.Labels}}'
@@ -822,9 +822,9 @@ docker service inspect <service-name> --format '{{json .Spec.Labels}}'
 Ensure:
 
 1. Docker socket proxy service is running
-2. Glance and proxy are on the same network
+2. Luna and proxy are on the same network
 3. The `$baseURL` matches your proxy service name
 
 ### Child services still visible
 
-Verify the `glance.parent` value exactly matches the parent's `glance.id`.
+Verify the `Luna.parent` value exactly matches the parent's `Luna.id`.

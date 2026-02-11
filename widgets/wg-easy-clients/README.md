@@ -1,6 +1,6 @@
 # WG-Easy Enabled Clients
 
-A glance custom widget that shows all enabled and disabled VPN endpoint clients from the WG-Easy web interface.
+A Luna custom widget that shows all enabled and disabled VPN endpoint clients from the WG-Easy web interface.
 Here is a preview.
 
 ![Preview](preview.png)

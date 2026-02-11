@@ -2,7 +2,7 @@
 
 ![](preview.png)
 
-A widget for Glance that displays all devices in your Tailscale tailnet, showing their connection status, update availability, and IP addresses.
+A widget for Luna that displays all devices in your Tailscale tailnet, showing their connection status, update availability, and IP addresses.
 
 ## Setup
 

@@ -24,7 +24,7 @@ This comprehensive widget displays detailed information about your Proxmox Backu
 - `PROXMOXVE_KEY` = Your PVE API token secret (format: `user@realm!tokenname:secret`)
 
 > [!IMPORTANT]
-> **Easy Setup**: If you already have the [official Proxmox VE widget](https://github.com/glanceapp/glance/blob/main/docs/widgets.md#proxmox) installed, the `PROXMOXVE_URL` and `PROXMOXVE_KEY` variables are already available! You only need to create the PBS-specific variables (`PBS_HOST` and `PBS_TOKEN`).
+> **Easy Setup**: If you already have the [official Proxmox VE widget](https://github.com/frozendark01/Luna/blob/main/docs/widgets.md#proxmox) installed, the `PROXMOXVE_URL` and `PROXMOXVE_KEY` variables are already available! You only need to create the PBS-specific variables (`PBS_HOST` and `PBS_TOKEN`).
 >
 > If you don't have the Proxmox VE widget installed, you'll need to manually create all four environment variables.
 
@@ -35,37 +35,37 @@ This comprehensive widget displays detailed information about your Proxmox Backu
 2. Navigate to **Configuration** → **Access Control** → **API Tokens**
 3. Click **Add** to create a new token
 4. Set **User** to your user (e.g., `root@pam`)
-5. Enter a **Token ID** (e.g., `glance`)
+5. Enter a **Token ID** (e.g., `Luna`)
 6. Uncheck **Privilege Separation** if you want full access
 7. Click **Add** and copy the generated secret
-8. Format your token as: `PBSAPIToken=root@pam!glance:your-secret-here`
+8. Format your token as: `PBSAPIToken=root@pam!Luna:your-secret-here`
 
 #### Creating PVE API Token (if not using Proxmox VE widget):
 1. Log into your Proxmox VE web interface
 2. Navigate to **Datacenter** → **Permissions** → **API Tokens**
 3. Click **Add** to create a new token
 4. Set **User** to your user (e.g., `root@pam`)
-5. Enter a **Token ID** (e.g., `glance`)
+5. Enter a **Token ID** (e.g., `Luna`)
 6. Uncheck **Privilege Separation** if you want full access
 7. Click **Add** and copy the generated secret
-8. Format as: `root@pam!glance:your-secret-here`
+8. Format as: `root@pam!Luna:your-secret-here`
 
 ### Environment File (.env)
 
-Create or update your `.env` file in your Glance directory:
+Create or update your `.env` file in your Luna directory:
 
 Proxmox Backup Server
-PBS_HOST=pbs.example.com:8007PBS_TOKEN=PBSAPIToken=root@pam!glance:xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+PBS_HOST=pbs.example.com:8007PBS_TOKEN=PBSAPIToken=root@pam!Luna:xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 
 Proxmox VE (if not already configured)
-PROXMOXVE_URL=pve.example.com:8006PROXMOXVE_KEY=root@pam!glance:xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+PROXMOXVE_URL=pve.example.com:8006PROXMOXVE_KEY=root@pam!Luna:xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 
 ### Troubleshooting
 
 **Widget shows "Failed to connect to PBS":**
 - Verify your `PBS_HOST` and `PBS_TOKEN` environment variables are correct
 - Check that `allow-insecure: true` is set if using self-signed certificates
-- Ensure your PBS server is reachable from the Glance container
+- Ensure your PBS server is reachable from the Luna container
 - Verify the API token has proper permissions
 
 **VM names show as worker IDs (e.g., "External-HDD:vm/103"):**
@@ -83,11 +83,11 @@ PROXMOXVE_URL=pve.example.com:8006PROXMOXVE_KEY=root@pam!glance:xxxxxxxx-xxxx-xx
 - Check PBS logs for API access errors
 
 > [!WARNING]  
-> If you're using self-signed TLS certificates with Glance, make sure to include these lines in your `docker-compose.yml`:
+> If you're using self-signed TLS certificates with Luna, make sure to include these lines in your `docker-compose.yml`:
 
 ```yaml
 volumes:
-  - ./glance.yml:/app/glance.yml
+  - ./Luna.yml:/app/Luna.yml
   - /path/to/rootCA.pem:/usr/local/share/ca-certificates/rootCA.crt:ro
 environment:
   - SSL_CERT_FILE=/usr/local/share/ca-certificates/rootCA.crt
@@ -105,7 +105,7 @@ The widget displays:
 
 ### Installation
 
-Add the following configuration to your `glance.yml` file:
+Add the following configuration to your `Luna.yml` file:
 ```yaml
 - type: custom-api
   title: Proxmox Backup Server

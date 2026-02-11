@@ -27,7 +27,7 @@ Each station varies how often their data is updated.
 ![Air Quality Widget Preview](preview.png)
 
 ## How to Use
-1. Copy the contents of the file below into your glance.yml file. (This works best as a -size: small widget)
+1. Copy the contents of the file below into your Luna.yml file. (This works best as a -size: small widget)
 2. Copy your API token from above and place it into the ${YOUR_TOKEN} field.
 3. As an exmaple:
 

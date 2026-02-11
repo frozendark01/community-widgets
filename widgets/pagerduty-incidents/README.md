@@ -2,7 +2,7 @@
 
 Shows the latest Incidents that are still open from [PagerDuty](http://pagerduty.com/).
 
-Useful to glance and quickly keep an eye on the latest incidents.
+Useful to Luna and quickly keep an eye on the latest incidents.
 
 ## Preview
 
@@ -18,7 +18,7 @@ You can do that from by visiting your Profile -> User Settings.
 Make the token available as an environmental variable, called `PAGERDUTY_TOKEN`,
 or if you just want to test it out replace the `${PAGERDUTY_TOKEN}` in the code.
 
-Then copy-paste this code and add it to your Glance configuration:
+Then copy-paste this code and add it to your Luna configuration:
 
 ```yaml
 - type: custom-api

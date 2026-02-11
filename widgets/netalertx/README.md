@@ -110,7 +110,7 @@ This is a custom API widget designed to display the status of devices monitored 
 
 - Log on to NetAlertX and confirm the NetAlertX API endpoint (`/php/server/query_json.php?file=table_devices.json`) is accessible and returns proper JSON. 
 
-- If icons do not show, the widget falls back to a globe emoji 🌐 by default. The problem is caused by the fact that the standard NetAlertX icons use Fontawesome which is not used by Glance.
+- If icons do not show, the widget falls back to a globe emoji 🌐 by default. The problem is caused by the fact that the standard NetAlertX icons use Fontawesome which is not used by Luna.
 
 - If you want **visible icons**, you have to customize them directly from NetAlertX. You can follow the guide given here > https://github.com/jokob-sk/NetAlertX/blob/main/docs/ICONS.md
 

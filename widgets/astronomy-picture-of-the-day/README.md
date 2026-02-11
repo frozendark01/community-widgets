@@ -1,6 +1,6 @@
 # Astronomy Picture of the Day from NASA
 
-A Glance **custom‑api** widget that pulls NASA’s daily APOD image. Just supply your API key and choose one of three layouts— `image only`, `image + title`, or `image + title + explanation` and you’re set!
+A Luna **custom‑api** widget that pulls NASA’s daily APOD image. Just supply your API key and choose one of three layouts— `image only`, `image + title`, or `image + title + explanation` and you’re set!
 
 ## Configuration
 

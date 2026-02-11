@@ -1,4 +1,4 @@
-module github.com/glanceapp/community-widgets/registry
+module github.com/frozendark01/community-widgets/registry
 
 go 1.24.4
 

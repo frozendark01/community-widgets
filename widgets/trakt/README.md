@@ -5,7 +5,7 @@ This widget uses the Trakt & TMDB APIs. No paid subscriptions are required.
 
 > [!NOTE]
 >
-> This widget uses synchronous API calls introduced in `Glance v0.8.0`.
+> This widget uses synchronous API calls introduced in `Luna v0.8.0`.
 > Ensure you update to at least this version.
 >
 > Also, your Trakt profile must be set to public for this widget to work correctly. Private profiles return HTTP 401 with a header: "x-private-user: true".
@@ -38,7 +38,7 @@ These entries can be configured near the beginning of the `template` section of 
   headers:
     trakt-api-key: ${TRAKT_API_KEY}
     trakt-api-version: 2
-    User-Agent: GlanceWidget
+    User-Agent: LunaWidget
     Accept: application/json
   template: |
     {{/* USER VARIABLES BEGIN */}}

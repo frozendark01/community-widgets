@@ -1,10 +1,10 @@
 # Duolingo Stats
 
-Display your Duolingo learning progress directly in Glance, including streak, XP, gems, and course information.
+Display your Duolingo learning progress directly in Luna, including streak, XP, gems, and course information.
 
 ## Introduction
 
-This widget provides a quick overview of your Duolingo statistics without needing to open the app or website. It displays your current streak, total XP, gems, and enrolled courses in a clean, organized layout that matches Glance's aesthetic.
+This widget provides a quick overview of your Duolingo statistics without needing to open the app or website. It displays your current streak, total XP, gems, and enrolled courses in a clean, organized layout that matches Luna's aesthetic.
 
 If you encounter any issues, please open an issue and tag me (@RealTong) - I'll investigate further.
 

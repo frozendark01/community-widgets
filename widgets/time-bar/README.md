@@ -121,11 +121,11 @@
 **Please ensure your timezone is updated in `docker-compose.yml`**:
 ```yaml
 services:
-  glance:
+  Luna:
     environment:
     - TZ=America/Vancouver #https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-    container_name: glance
-    image: glanceapp/glance
+    container_name: Luna
+    image: frozendark01/Luna
     restart: unless-stopped
     volumes:
       - ./config:/app/config
@@ -139,7 +139,7 @@ services:
 
 ## Note
 - All logic for time calculation happens on device. 
-- This on-device version **does not support leap years** as at the time of writing, Glance does not support the mod or % operator. If leap year support is needed, please host an external service. Example code below:  
+- This on-device version **does not support leap years** as at the time of writing, Luna does not support the mod or % operator. If leap year support is needed, please host an external service. Example code below:  
 
 ```
 export default {

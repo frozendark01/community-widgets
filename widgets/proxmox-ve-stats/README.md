@@ -66,7 +66,7 @@ You need to generate an API token for it, follow the steps below if you don't ha
 9. Expand Permissions, click on API Tokens
 10. Click the Add button
     - User: user from bullet 8 above
-    - Token ID: something informative like the application or purpose like for general use `shared` or for specific `glance`
+    - Token ID: something informative like the application or purpose like for general use `shared` or for specific `Luna`
     - Privilege Separation: Checked
 11. Go back to the "Permissions" menu
 12. Click Add -> API Token Permission

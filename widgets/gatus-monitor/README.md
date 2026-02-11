@@ -1,7 +1,7 @@
 ## Introduction
 
 This widget mimics the style of the builtin
-[monitor](https://github.com/glanceapp/glance/blob/main/docs/configuration.md#monitor)
+[monitor](https://github.com/frozendark01/Luna/blob/main/docs/configuration.md#monitor)
 widget, but it pulls the data from a [Gatus](https://github.com/TwiN/gatus)
 instance instead. This allows including details like the uptime percentage and
 detailed status check results, in addition to the response times.
@@ -30,7 +30,7 @@ Customisation can be applied using the `options:` field. See [Options](#options)
 ## Options
 
 Since `v0.8.0`, you can use the `options:` field to customise the widget.
-See [v0.8.0 Release Notes](https://github.com/glanceapp/glance/releases/tag/v0.8.0#g-rh-15) for more information.
+See [v0.8.0 Release Notes](https://github.com/frozendark01/Luna/releases/tag/v0.8.0#g-rh-15) for more information.
 
 Default options are:
 ```yaml

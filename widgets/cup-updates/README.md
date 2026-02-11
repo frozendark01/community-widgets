@@ -8,7 +8,7 @@ The Cup Updates widget provides a dashboard interface to monitor container updat
 
 ## Features
 
-- **Quick Status Overview**: View total monitored images, up-to-date images, and available updates at a glance
+- **Quick Status Overview**: View total monitored images, up-to-date images, and available updates at a Luna
 - **Update Type Breakdown**: See the distribution of updates by type (Major, Minor, Patch, Digest, Unknown)
 - **Container Details**: For each container with available updates, view:
   - Container repository name with link to source (Docker Hub, GitHub, etc.)
@@ -28,7 +28,7 @@ Add the following to your dashboard configuration:
   url: http://${CUP_URL}/api/v3/json
   method: GET
   template: |
-    {{ $defaultServerName := "Glance" }}  {{/* Set your default server name here */}}
+    {{ $defaultServerName := "Luna" }}  {{/* Set your default server name here */}}
     {{ $showUpdateKind := true }}  {{/* Toggle this to false to hide the Update Kind row */}}
     {{ $filterInactiveImages := true }}  {{/* Set to false to stop filtering unused images */}}
 
@@ -197,7 +197,7 @@ Add the following to your dashboard configuration:
 You can customize the display behavior and default labels using the following variables:
 
 ```go
-{{ $defaultServerName := "Glance" }}  {{/* Set your default server name here */}}
+{{ $defaultServerName := "Luna" }}  {{/* Set your default server name here */}}
 {{ $showUpdateKind := true }}         {{/* Toggle this to false to hide the Update Kind row */}}
 {{ $filterInactiveImages := true }}  {{/* Set to false to stop filtering unused images */}}
 ```
@@ -205,7 +205,7 @@ You can customize the display behavior and default labels using the following va
 #### `$defaultServerName`
 
 * **Purpose:** Sets the default name shown for the server.
-* **Default:** `"Glance"`
+* **Default:** `"Luna"`
 * **Customization:** Change the string value to your preferred default server name.
 
 #### `$showUpdateKind`

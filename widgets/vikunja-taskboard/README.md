@@ -11,7 +11,7 @@
     cache: 5s
     url: http://${VIKUNJA_HOST}:${VIKUNJA_PORT}/api/v1/tasks/all?sort_by=due_date&order_by=asc&per_page=${NUMBER_OF_TASKS}&filter=((due_date>now-1d%26%26due_date<now%2B10d%26%26project!=3)||(due_date>now%26%26priority>3))%26%26done=false
     headers:
-        Authorization: Bearer ${VIKUNJA_GLANCE_API_TOKEN}
+        Authorization: Bearer ${VIKUNJA_Luna_API_TOKEN}
     template: |
         <div style="overflow-x: auto">
         <p>${VIKUNJA_FILTER_DESCRIPTION} <a class="bookmarks-link color-highlight size-h4" href="http://${VIKUNJA_HOST}:${VIKUNJA_PORT}/api/v1/docs">Go to docs</a></p>
@@ -78,7 +78,7 @@
 - `NUMBER_OF_TASKS` - The total number of tasks to be displayed. If more tasks suffice the filter, only up to this much will be shown.
 - `VIKUNJA_HOST` - The host of the vikunja server, typically when self-hosted, it's at `localhost`
 - `VIKUNJA_PORT` - A custom port, else set this to `3456`
-- `VIKUNJA_GLANCE_API_TOKEN` - The api token which is used to retrieve tasks. You can create one in `Avatar profile > Settings > API Tokens > Create a token (choose the permission for tasks)`
+- `VIKUNJA_Luna_API_TOKEN` - The api token which is used to retrieve tasks. You can create one in `Avatar profile > Settings > API Tokens > Create a token (choose the permission for tasks)`
 - `VIKUNJA_FILTER_DESCRIPTION` - User-friendly way to describe your filter, for more filters, see the docs at `http://${VIKUNJA_HOST}:${VIKUNJA_PORT}/api/v1/docs` or [the online version](https://try.vikunja.io/api/v1/docs)
 
 

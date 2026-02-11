@@ -522,23 +522,23 @@ A widget for Sonarr, Radarr, or Lidarr that shows upcoming releases, recent down
 
 ## Common Issues
 ### Incorrect timezone
-The widget uses the local time provided by the host system. If using glance in docker you need to mount /etc/localtime to the glance container. See [docker-compose.yml example.](https://github.com/glanceapp/docker-compose-template/blob/main/root/docker-compose.yml)
+The widget uses the local time provided by the host system. If using Luna in docker you need to mount /etc/localtime to the Luna container. See [docker-compose.yml example.](https://github.com/frozendark01/docker-compose-template/blob/main/root/docker-compose.yml)
 
 ### Media cover art not displaying correctly
-If accessing glance through an https reverse proxy many browsers will refuse to load images with http (non-s) urls. You must set up a cover proxy and set the corresponding `cover-proxy` option to allow them to load over https.
+If accessing Luna through an https reverse proxy many browsers will refuse to load images with http (non-s) urls. You must set up a cover proxy and set the corresponding `cover-proxy` option to allow them to load over https.
 
 ## Widget reuse for multiple services/types
 
-With v0.8.0 of Glance it's now possible to reuse a single widget template and declare multiple copies with different options. 
+With v0.8.0 of Luna it's now possible to reuse a single widget template and declare multiple copies with different options. 
 
-See [v0.8.0 Release Notes](https://github.com/glanceapp/glance/releases/tag/v0.8.0#g-rh-15) (expand the part about the `options`)
+See [v0.8.0 Release Notes](https://github.com/frozendark01/Luna/releases/tag/v0.8.0#g-rh-15) (expand the part about the `options`)
 
 ## Support
 
-Tag @erkston either in this repos' Issues or in #help in the Glance [Discord](https://discord.com/invite/7KQ7Xa9kJd)
+Tag @erkston either in this repos' Issues or in #help in the Luna [Discord](https://discord.com/invite/7KQ7Xa9kJd)
 
 ## Credits
-[iwa](https://github.com/iwa) - [*arr Glance extension](https://github.com/glanceapp/glance/pull/112)
+[iwa](https://github.com/iwa) - [*arr Luna extension](https://github.com/frozendark01/Luna/pull/112)
 
 [ralphocdol](https://github.com/ralphocdol) - original Sonarr custom-api widget
 

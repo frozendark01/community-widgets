@@ -6,7 +6,7 @@
 * Duplicate widget types are allowed so long as they are sufficiently different from one another, so for example you could have two or more different weather widgets that use different APIs, provide different information or have different styles
 * Pull requests require at least one vouch from the community before being merged so long as they meet the guidelines
 * Anyone can vouch for a pull request by leaving a comment or a 👍 after having tested the widget
-* The authors of each widget are responsible for maintaining it, including updating it to work with new versions of Glance
+* The authors of each widget are responsible for maintaining it, including updating it to work with new versions of Luna
 * The authors of each widget are responsible for responding to issues and pull requests related to their widget
 * If a widget is left in a broken state for an extended period of time and with no response from its author, it may be removed from the repository or transferred to a new maintainer
 * If you are submitting a pull request that modifies the widget of another author, please mention them in the pull request description and give them adequate time to review it
@@ -82,7 +82,7 @@ This can be a few minutes or less for requests to local services or multiple hou
 
 #### Don't submit widgets which require additional local API's
 
-The goal of this repository is to provide widgets which can be copy-pasted, slightly configured and work out of the box. If your widget requires an additional API to run alongside it that does some kind of data parsing, please create an extension widget instead or request new functionality in the [main repository](https://github.com/glanceapp/glance) for the `custom-api` widget that would allow that parsing to be done directly in the widget.
+The goal of this repository is to provide widgets which can be copy-pasted, slightly configured and work out of the box. If your widget requires an additional API to run alongside it that does some kind of data parsing, please create an extension widget instead or request new functionality in the [main repository](https://github.com/frozendark01/Luna) for the `custom-api` widget that would allow that parsing to be done directly in the widget.
 
 #### Apply the necessary custom style directly to the elements
 
@@ -98,7 +98,7 @@ Instead, embed the necessary CSS directly:
 <img style="width: 5rem; aspect-ratio: 3 / 4; border-radius: var(--border-radius);" src="...">
 ```
 
-This reduces the odds of your widget breaking in the future if the CSS classes get modified. You can use all the utility classes such as `flex`, `color-primary`, `size-h3`, `text-center`, etc, as those are unlikely to change. If you have an idea for a new utility class, please open an issue or submit a PR in the [main repository](https://github.com/glanceapp/glance).
+This reduces the odds of your widget breaking in the future if the CSS classes get modified. You can use all the utility classes such as `flex`, `color-primary`, `size-h3`, `text-center`, etc, as those are unlikely to change. If you have an idea for a new utility class, please open an issue or submit a PR in the [main repository](https://github.com/frozendark01/Luna).
 
 #### Don't hardcode colors
 

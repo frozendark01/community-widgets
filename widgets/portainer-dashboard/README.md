@@ -19,7 +19,7 @@ A widget to display a dashboard of your portainer services.
 3. Set the `PORTAINER_ENDPOINT_ID` environment variable to the endpoint ID.
 4. Set the `PORTAINER_URL` environment variable to the portainer URL. e.g. `http://<your-portainer-url>`
 
-Once the prerequisites and setup are complete, copy the code below and add it to your `glance.yml` file.
+Once the prerequisites and setup are complete, copy the code below and add it to your `Luna.yml` file.
 
 ```yaml
 - type: custom-api

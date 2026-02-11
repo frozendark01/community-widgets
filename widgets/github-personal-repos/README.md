@@ -12,7 +12,7 @@
   headers:
     Authorization: Bearer ${Github_Personal_Access_Token}
     Accept: application/vnd.github.v3+json
-    User-Agent: Glance-Dashboard
+    User-Agent: Luna-Dashboard
   template: |
     <div class="github-repos">
       <ul class="list list-gap-14 collapsible-container" data-collapse-after="5">

@@ -62,7 +62,7 @@
           {{ end }}
         </ul>
         {{ if gt (len $games) 6 }}
-          <label for="{{ $wid }}-cb" style="position:absolute;bottom:0px;right:0;cursor:pointer;color:var(--glance-accent-color);font-size:16px;padding:5px;">
+          <label for="{{ $wid }}-cb" style="position:absolute;bottom:0px;right:0;cursor:pointer;color:var(--Luna-accent-color);font-size:16px;padding:5px;">
             <span style="display:inline-block;transition:transform .2s;font-size:20px;">&#9662;</span>
           </label>
         {{ end }}
@@ -105,7 +105,7 @@
       {{ $r2        := .Exists "linescore.offense.second" }}
       {{ $r3        := .Exists "linescore.offense.third" }}
       {{ $offTeamId := .Int    "linescore.offense.team.id" }}
-      <li style="display:flex;flex-direction:column;gap:6px;padding:8px 0;border-bottom:1px solid var(--glance-divider);white-space:normal;"
+      <li style="display:flex;flex-direction:column;gap:6px;padding:8px 0;border-bottom:1px solid var(--Luna-divider);white-space:normal;"
           {{ if ne $abs "Preview" }}
             title="{{ $awayAbr }} Box:{{ range $i, $inning := (.Array "linescore.innings") }}
               {{ if lt $i 9 }}  Inning {{ add $i 1 }}: {{ $inning.Int "away.runs" }}{{ else }}  Inning {{ add $i 1 }}: {{ $inning.Int "away.runs" }}{{ end }}
@@ -120,12 +120,12 @@
                 style='width:24px;height:24px;margin-right:4px;'/>
             <span style="display:flex;flex-direction:column;margin-right:4px;">
               <span style="font-weight:bold;">{{ $awayAbr }}</span>
-              <span style="font-size:0.7em;color:var(--glance-muted-text)">
+              <span style="font-size:0.7em;color:var(--Luna-muted-text)">
                 ({{ printf "%d-%d" $awayRecW $awayRecL }})
               </span>
             </span>
             {{ if ne $abs "Preview" }}
-              <span style="margin-left:auto;font-size:1em;font-weight:700;font-variant-numeric:tabular-nums;color:var(--glance-heading-text);">{{ $awaySc }}</span>
+              <span style="margin-left:auto;font-size:1em;font-weight:700;font-variant-numeric:tabular-nums;color:var(--Luna-heading-text);">{{ $awaySc }}</span>
             {{ end }}
             {{ if and $live (eq $offTeamId $awayId) }}
               <svg width="20" height="20" viewBox="0 0 24 24" style="margin-left:4px;flex-shrink:0;">
@@ -139,7 +139,7 @@
         <span style="text-align:center;width:90px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;font-size:0.9em;white-space:nowrap;">
           {{ if eq $abs "Preview" }}
             {{ $gameTime := (.String "gameDate" | parseTime "2006-01-02T15:04:05Z").In now.Location }}
-            <span style="color:var(--glance-muted-text)">{{ printf "%02d:%02d" $gameTime.Hour $gameTime.Minute }}</span>
+            <span style="color:var(--Luna-muted-text)">{{ printf "%02d:%02d" $gameTime.Hour $gameTime.Minute }}</span>
           {{ else if $live }}
             <span style="font-weight:500;">{{ printf "%s %d" $inningSt $inningN }}</span>
           {{ else if or (eq $detailed "Game Over") (eq $detailed "Final") }}
@@ -148,7 +148,7 @@
             <span>{{ $detailed }}</span>
           {{ end }}
           {{ if $isPlayoffSeries }}
-            <span style="font-size:0.9em;color:var(--glance-accent-color);margin-top:0;">
+            <span style="font-size:0.9em;color:var(--Luna-accent-color);margin-top:0;">
               {{ if $seriesLabel }}
                 {{ $seriesLabel }}
               {{ else if gt $seriesGame 0 }}
@@ -169,11 +169,11 @@
               </svg>
             {{ end }}
             {{ if ne $abs "Preview" }}
-              <span style="margin-left:auto;font-size:1em;font-weight:700;font-variant-numeric:tabular-nums;color:var(--glance-heading-text);">{{ $homeSc }}</span>
+              <span style="margin-left:auto;font-size:1em;font-weight:700;font-variant-numeric:tabular-nums;color:var(--Luna-heading-text);">{{ $homeSc }}</span>
             {{ end }}
             <span style="display:flex;flex-direction:column;margin-left:4px;text-align:right;">
               <span style="font-weight:bold;">{{ $homeAbr }}</span>
-              <span style="font-size:0.7em;color:var(--glance-muted-text)">
+              <span style="font-size:0.7em;color:var(--Luna-muted-text)">
                 ({{ printf "%d-%d" $homeRecW $homeRecL }})
               </span>
             </span>

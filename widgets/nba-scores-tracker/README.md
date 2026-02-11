@@ -62,7 +62,7 @@
         </ul>
       
         {{ if gt (len $events) 6 }}
-          <label for="{{ $wid }}-cb" style="position:absolute;bottom:0px;right:0;cursor:pointer;color:var(--glance-accent-color);font-size:16px;padding:5px;">
+          <label for="{{ $wid }}-cb" style="position:absolute;bottom:0px;right:0;cursor:pointer;color:var(--Luna-accent-color);font-size:16px;padding:5px;">
             <span style="display:inline-block;transition:transform .2s;font-size:20px;">&#9662;</span>
           </label>
         {{ end }}
@@ -102,7 +102,7 @@
       {{ if or (eq (len $homeAbbr) 0) (gt (len $homeAbbr) 3) }}
         {{ $homeAbbr = printf "%.3s" ($home.String "team.displayName") }}
       {{ end }}
-      <li class="nba-row" style="display:flex;flex-direction:column;gap:4px;padding:10px 0;border-bottom:1px solid var(--glance-divider);" {{ if ne $state "STATUS_SCHEDULED" }}title="{{ $awayAbbr }} Box:{{ range $j,$ls := $away.Array "linescores" }}{{ if eq $j 0 }} Q1: {{ else if eq $j 1 }} Q2: {{ else if eq $j 2 }} Q3: {{ else if eq $j 3 }} Q4: {{ else }} OT: {{ end }}{{ $ls.String "value" }}{{ end }}&#10;{{ $homeAbbr }} Box:{{ range $j,$ls := $home.Array "linescores" }}{{ if eq $j 0 }} Q1: {{ else if eq $j 1 }} Q2: {{ else if eq $j 2 }} Q3: {{ else if eq $j 3 }} Q4: {{ else }} OT: {{ end }}{{ $ls.String "value" }}{{ end }}"{{ end }}>
+      <li class="nba-row" style="display:flex;flex-direction:column;gap:4px;padding:10px 0;border-bottom:1px solid var(--Luna-divider);" {{ if ne $state "STATUS_SCHEDULED" }}title="{{ $awayAbbr }} Box:{{ range $j,$ls := $away.Array "linescores" }}{{ if eq $j 0 }} Q1: {{ else if eq $j 1 }} Q2: {{ else if eq $j 2 }} Q3: {{ else if eq $j 3 }} Q4: {{ else }} OT: {{ end }}{{ $ls.String "value" }}{{ end }}&#10;{{ $homeAbbr }} Box:{{ range $j,$ls := $home.Array "linescores" }}{{ if eq $j 0 }} Q1: {{ else if eq $j 1 }} Q2: {{ else if eq $j 2 }} Q3: {{ else if eq $j 3 }} Q4: {{ else }} OT: {{ end }}{{ $ls.String "value" }}{{ end }}"{{ end }}>
         <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;min-width:0;">
           <div style="display:flex;align-items:flex-start;gap:6px;min-width:0;">
             {{ if $awayLogo }}
@@ -114,12 +114,12 @@
               <div style="display:flex;align-items:baseline;gap:6px;min-width:0;">
                 <span style="font-weight:700;letter-spacing:0.08em;white-space:nowrap;text-transform:uppercase;">{{ $awayAbbr }}</span>
               </div>
-              {{ if $awayRec }}<span style="font-size:0.7em;color:var(--glance-muted-text);white-space:nowrap;">({{ $awayRec }})</span>{{ end }}
+              {{ if $awayRec }}<span style="font-size:0.7em;color:var(--Luna-muted-text);white-space:nowrap;">({{ $awayRec }})</span>{{ end }}
             </div>
           </div>
         <div style="flex:1;display:flex;align-items:center;justify-content:center;gap:10px;white-space:nowrap;letter-spacing:0.05em;min-width:0;">
           {{ if ne $state "STATUS_SCHEDULED" }}
-            <span style="font-size:1em;font-weight:700;font-variant-numeric:tabular-nums;color:var(--glance-heading-text);">{{ $away.String "score" }}</span>
+            <span style="font-size:1em;font-weight:700;font-variant-numeric:tabular-nums;color:var(--Luna-heading-text);">{{ $away.String "score" }}</span>
           {{ end }}
           <span style="font-size:{{ $statusFont }};font-weight:500;">
             {{ if eq $state "STATUS_IN_PROGRESS" }}
@@ -149,10 +149,10 @@
             {{ end }}
           </span>
           {{ if ne $state "STATUS_SCHEDULED" }}
-            <span style="font-size:1em;font-weight:700;font-variant-numeric:tabular-nums;color:var(--glance-heading-text);">{{ $home.String "score" }}</span>
+            <span style="font-size:1em;font-weight:700;font-variant-numeric:tabular-nums;color:var(--Luna-heading-text);">{{ $home.String "score" }}</span>
           {{ end }}
           {{ if .Exists "competitions.0.series" }}
-            <span style="font-size:0.7em;color:var(--glance-muted-text);">{{ .String "competitions.0.series.summary" }}</span>
+            <span style="font-size:0.7em;color:var(--Luna-muted-text);">{{ .String "competitions.0.series.summary" }}</span>
           {{ end }}
         </div>
           <div style="display:flex;align-items:flex-start;gap:6px;justify-content:flex-end;min-width:0;">
@@ -160,7 +160,7 @@
               <div style="display:flex;align-items:baseline;gap:6px;min-width:0;">
                 <span style="font-weight:700;letter-spacing:0.08em;white-space:nowrap;text-transform:uppercase;">{{ $homeAbbr }}</span>
               </div>
-              {{ if $homeRec }}<span style="font-size:0.7em;color:var(--glance-muted-text);white-space:nowrap;">({{ $homeRec }})</span>{{ end }}
+              {{ if $homeRec }}<span style="font-size:0.7em;color:var(--Luna-muted-text);white-space:nowrap;">({{ $homeRec }})</span>{{ end }}
             </div>
             {{ if $homeLogo }}
               <img src="{{ $homeLogo }}" alt="{{ $homeAbbr }}" style="width:34px;height:34px;border-radius:50%;flex-shrink:0;"/>

@@ -59,7 +59,7 @@
           </ul>
 
           {{ if gt (len $events) 6 }}
-            <label for="{{ $wid }}-cb" style="position:absolute;bottom:0px;right:0;cursor:pointer;color:var(--glance-accent-color);font-size:16px;padding:5px;">
+            <label for="{{ $wid }}-cb" style="position:absolute;bottom:0px;right:0;cursor:pointer;color:var(--Luna-accent-color);font-size:16px;padding:5px;">
               <span style="display:inline-block;transition:transform .2s">▼</span>
             </label>
           {{ end }}
@@ -148,7 +148,7 @@
           {{ $tooltip = printf "%s Box:%s\n%s Box:%s\n\nGame Leaders:\n%s" ($away.String "team.abbreviation") $awayBoxScore ($home.String "team.abbreviation") $homeBoxScore $gameLeaders }}
         {{ end }}
 
-        <li style="display:flex;align-items:center;white-space:nowrap;gap:12px;padding:6px 0;border-bottom:1px solid var(--glance-divider);cursor:default" {{ if ne $state "STATUS_SCHEDULED" }}title="{{ $tooltip }}"{{ end }}>
+        <li style="display:flex;align-items:center;white-space:nowrap;gap:12px;padding:6px 0;border-bottom:1px solid var(--Luna-divider);cursor:default" {{ if ne $state "STATUS_SCHEDULED" }}title="{{ $tooltip }}"{{ end }}>
           <span style="display:flex;align-items:center;flex:1;justify-content:space-between;">
             {{ if $awayScheduleLink }}
               <a href="{{ $awayScheduleLink }}" target="_blank" style="text-decoration:none;color:inherit;display:flex;align-items:center;">
@@ -159,7 +159,7 @@
             {{ end }}
             <span style="display:flex;flex-direction:column;flex:1;">
               <span style="font-weight:bold;">{{ $away.String "team.abbreviation" }}</span>
-              {{ if $awayRec }}<span style="font-size:0.7em;color:var(--glance-muted-text)">({{ $awayRec }})</span>{{ end }}
+              {{ if $awayRec }}<span style="font-size:0.7em;color:var(--Luna-muted-text)">({{ $awayRec }})</span>{{ end }}
             </span>
             {{ if ne $state "STATUS_SCHEDULED" }}<span style="font-size:1.1em;font-weight:500;min-width:20px;text-align:right;">{{ $away.String "score" }}</span>{{ end }}
           </span>
@@ -178,7 +178,7 @@
                 </span>
 
                 {{ if .Exists "competitions.0.series" }}
-                  <span style="font-size:0.7em;color:var(--glance-accent-color);margin-top:5px;">{{ .String "competitions.0.series.summary" }}</span>
+                  <span style="font-size:0.7em;color:var(--Luna-accent-color);margin-top:5px;">{{ .String "competitions.0.series.summary" }}</span>
                 {{ end }}
               </span>
             </a>
@@ -196,7 +196,7 @@
               </span>
 
               {{ if .Exists "competitions.0.series" }}
-                <span style="font-size:0.7em;color:var(--glance-accent-color);margin-top:5px;">{{ .String "competitions.0.series.summary" }}</span>
+                <span style="font-size:0.7em;color:var(--Luna-accent-color);margin-top:5px;">{{ .String "competitions.0.series.summary" }}</span>
               {{ end }}
             </span>
           {{ end }}
@@ -210,7 +210,7 @@
             {{ end }}
             <span style="display:flex;flex-direction:column;flex:1;">
               <span style="font-weight:bold;">{{ $home.String "team.abbreviation" }}</span>
-              {{ if $homeRec }}<span style="font-size:0.7em;color:var(--glance-muted-text)">({{ $homeRec }})</span>{{ end }}
+              {{ if $homeRec }}<span style="font-size:0.7em;color:var(--Luna-muted-text)">({{ $homeRec }})</span>{{ end }}
             </span>
             {{ if ne $state "STATUS_SCHEDULED" }}<span style="font-size:1.1em;font-weight:500;min-width:20px;text-align:right;">{{ $home.String "score" }}</span>{{ end }}
           </span>

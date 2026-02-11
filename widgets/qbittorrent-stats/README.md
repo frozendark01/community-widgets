@@ -1,6 +1,6 @@
 ## qBittorrent widget
 
-At-a-***glance*** view your total download speed, and the number of torrents currently seeding and leeching.
+At-a-***Luna*** view your total download speed, and the number of torrents currently seeding and leeching.
 
 There are 4 options for this widget:
 1. ```view: "detailed"```: with a detailed list for each active torrent currently downloading that shows under the "Show more" button (hidden when there is no active torrents)
@@ -10,7 +10,7 @@ There are 4 options for this widget:
 
 ### Prerequisites (Required)
 
-This widget requires you to bypass authentication for your Glance dashboard within qBittorrent's settings. This allows Glance to securely access the API without needing to handle a complex login process or wrapper.
+This widget requires you to bypass authentication for your Luna dashboard within qBittorrent's settings. This allows Luna to securely access the API without needing to handle a complex login process or wrapper.
 
 1. Open the qBittorrent Web UI.
 
@@ -18,8 +18,8 @@ This widget requires you to bypass authentication for your Glance dashboard with
 
 3. Under the Authentication section, check the box for "Bypass authentication for clients in whitelisted IP subnets".
 
-4. In the text box, add the IP address or subnet of where **Glance** is running. For example, if your entire local network is ```192.168.1.x```, you can add ```192.168.1.0/24```.
-     -  **Note for Docker Users:** If you are running Glance in a Docker container (not using ```network_mode: host```), qBittorrent will see requests coming from Docker's internal IP address. You must whitelist your Docker network's subnet. Here’s how to find the right one:
+4. In the text box, add the IP address or subnet of where **Luna** is running. For example, if your entire local network is ```192.168.1.x```, you can add ```192.168.1.0/24```.
+     -  **Note for Docker Users:** If you are running Luna in a Docker container (not using ```network_mode: host```), qBittorrent will see requests coming from Docker's internal IP address. You must whitelist your Docker network's subnet. Here’s how to find the right one:
 
           1. Find your Docker network name.
           Open a terminal on your Docker host and run ```docker network ls```. This will list all available networks.
@@ -72,7 +72,7 @@ Use ```mode: "upload"``` in ```options```to get the upload mode
 
 ![Mode Upload and Detailed View](./preview5.png)
 
-Once the prerequisites and setup are complete, copy the code below and add it to your ```glance.yml``` file.
+Once the prerequisites and setup are complete, copy the code below and add it to your ```Luna.yml``` file.
 
 ```yaml
 - type: custom-api

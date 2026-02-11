@@ -1,15 +1,15 @@
-- title: Glance F1
-  url: https://github.com/SkyAllinott/glance-F1
+- title: Luna F1
+  url: https://github.com/SkyAllinott/Luna-F1
   description: Adds user customization to widget by @abaza738 like local timezones, a track map, and more.
   author: SkyAllinott
 
 - title: GitHub Graph
-  url: https://github.com/haondt/glance-github-graph
+  url: https://github.com/haondt/Luna-github-graph
   description: Show your GitHub contribution graph.
   author: haondt
 
 - title: iCal (ICS) Calendar List
-  url: https://github.com/AWildLeon/Glance-iCal-Events
+  url: https://github.com/AWildLeon/Luna-iCal-Events
   description: List a ICS File's upcoming events (Like Google Calendar List).
   author: AWildLeon
 
@@ -24,7 +24,7 @@
   author: panonim
 
 - title: Restic snapshot
-  url: https://github.com/not-first/restic-glance-extension
+  url: https://github.com/not-first/restic-Luna-extension
   description: Show the most recent snapshot(s) and storage stats of a Restic repository.
   author: not-first
 
@@ -34,7 +34,7 @@
   author: gshimself
 
 - title: Kubernetes nodes and apps
-  url: https://github.com/lukasdietrich/glance-k8s
+  url: https://github.com/lukasdietrich/Luna-k8s
   description: List Kubernetes nodes and applications. Also including helm charts.
   author: lukasdietrich
 
@@ -43,7 +43,7 @@
   description: Display statistics from your Navidrome (or Subsonic) instance and interact with them.
   author: SomeCodecat
 
-- title: Glance Transmission
-  url: https://github.com/Xtrems876/glance-transmission
+- title: Luna Transmission
+  url: https://github.com/Xtrems876/Luna-transmission
   description: Show Transmission downloads
   author: Xtrems876

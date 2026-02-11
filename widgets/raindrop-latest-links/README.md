@@ -1,8 +1,8 @@
-# 🌧 Raindrop.io Widget for Glance
+# 🌧 Raindrop.io Widget for Luna
 
 Hey there, fellow bookmark hoarder! 👋
 
-This widget connects your Glance dashboard to Raindrop.io, because let's face it - we all have too many bookmarks and need a better way to manage them. It's like having your own personal librarian, but for links.
+This widget connects your Luna dashboard to Raindrop.io, because let's face it - we all have too many bookmarks and need a better way to manage them. It's like having your own personal librarian, but for links.
 
 - **Latest Links Widget**: Shows your most recent bookmarks with a clean, collapsible interface
 
@@ -181,12 +181,12 @@ Let's get this party started! 🚀
 1. Get a personal access token:
    - Go to https://app.raindrop.io/settings/integrations
    - Click on "Create new token"
-   - Give it a name (e.g., "GlanceApp Widget")
+   - Give it a name (e.g., "frozendark01 Widget")
    - Generate a Test Token
      **Note:** Test tokens are only valid for 14 days. Currently, OAuth flow is not possible when running in Docker, so you'll need to manually refresh your test token every 14 days. I'm sure, when this widget is helpfull for you, you will find a way ;-) 
    - Test Token is usedf for `RAINDROP_TOKEN`
 
-2. Add the token to your GlanceApp configuration as an environment variable:
+2. Add the token to your frozendark01 configuration as an environment variable:
    - `RAINDROP_TOKEN` (use the personal access token you created)
 
 ## Debug Authorization

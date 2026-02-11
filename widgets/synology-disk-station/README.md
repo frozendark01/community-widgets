@@ -10,7 +10,7 @@ Displays RAM and CPU usage and used storage of your Synology NAS
 ![Synology Disk Station Widget Preview](preview.png)
 
 ## How to Use
-1. Copy the contents of the file below into your glance.yml file. (This works best as a -size: small widget)
+1. Copy the contents of the file below into your Luna.yml file. (This works best as a -size: small widget)
 2. Replace [username], [password], [IP] and [Port]
 
 

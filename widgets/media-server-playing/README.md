@@ -11,7 +11,7 @@ This is a widget for various media servers to display currently active sessions.
 
 > [!NOTE]
 >
-> The widget has been updated to `glance v0.8.0`.
+> The widget has been updated to `Luna v0.8.0`.
 > Ensure you update to at least this version.
 
 Tested with `Plex`, `Tautulli`, `Jellyfin`, and `Emby`.
@@ -54,12 +54,12 @@ Customisation can be applied using the `options:` field. See [Options](#options)
 * `EMBY_KEY` - The Emby API key, available in `⚙️ icon in top-right` -> `Advanced` -> `API Keys`
 
 ## Secrets
-Since `v0.8.0`, you can use Docker secrets instead of environment variables. See [v0.8.0 Release Notes](https://github.com/glanceapp/glance/releases/tag/v0.8.0#g-rh-5) for more information.  
+Since `v0.8.0`, you can use Docker secrets instead of environment variables. See [v0.8.0 Release Notes](https://github.com/frozendark01/Luna/releases/tag/v0.8.0#g-rh-5) for more information.  
 If you do, replace `${YOUR_API_KEY}` with `${secret:your-api-key-secret}`.
 
 ## Options
 Since `v0.8.0`, you can use the `options:` field to customise the widget.  
-See [v0.8.0 Release Notes](https://github.com/glanceapp/glance/releases/tag/v0.8.0#g-rh-15) for more information.
+See [v0.8.0 Release Notes](https://github.com/frozendark01/Luna/releases/tag/v0.8.0#g-rh-15) for more information.
 
 > [!CAUTION]
 >

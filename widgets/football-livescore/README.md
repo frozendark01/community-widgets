@@ -8,7 +8,7 @@ This widget supports:
 - Short team names with ellipsis truncation
 - Scheduled match times
 - Postponed / Canceled statuses
-- Responsive layout inside Glance dashboard
+- Responsive layout inside Luna dashboard
 
 ## 📸 Preview
 
@@ -21,11 +21,11 @@ This widget supports:
 ✔ Live timer (green) using `displayClock`  
 ✔ Responsive team name truncation  
 ✔ Handles all match states (scheduled, live, postponed, canceled)  
-✔ Easy integration with Glance’s `custom-api` widget system
+✔ Easy integration with Luna’s `custom-api` widget system
 
-## 🚀 Installation (Add This Widget to Glance)
+## 🚀 Installation (Add This Widget to Luna)
 
-Add the following block under `widgets:` in your `glance.yml`:
+Add the following block under `widgets:` in your `Luna.yml`:
 
 ```yaml
 - type: custom-api

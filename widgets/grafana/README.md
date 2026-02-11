@@ -28,7 +28,7 @@ Similarly, write down your Grafana Dashboard base URL, you can store it in
 of your instance  (ex: `https://instance-name.grafana.net` or the equivalent
 to access your self-hosted instance).
 
-Then copy-paste this code and add it to your Glance configuration:
+Then copy-paste this code and add it to your Luna configuration:
 
 ```yaml
 - type: custom-api

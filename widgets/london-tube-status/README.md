@@ -14,20 +14,20 @@
       <div class="flex flex-column gap-5">
         {{ with .Options.lines }}
           {{ range . }}
-            {{ with newRequest (printf "https://api.tfl.gov.uk/line/%s/status" .) | withHeader "User-Agent" "Glance-Dashboard/1.0" | getResponse }}
+            {{ with newRequest (printf "https://api.tfl.gov.uk/line/%s/status" .) | withHeader "User-Agent" "Luna-Dashboard/1.0" | getResponse }}
               {{ if eq .Response.StatusCode 200 }}
                 {{ range .JSON.Array "" }}{{ template "line" . }}{{ end }}
               {{ end }}
             {{ end }}
           {{ end }}
         {{ else }}
-          {{ with newRequest "https://api.tfl.gov.uk/line/mode/tube/status" | withHeader "User-Agent" "Glance-Dashboard/1.0" | getResponse }}
+          {{ with newRequest "https://api.tfl.gov.uk/line/mode/tube/status" | withHeader "User-Agent" "Luna-Dashboard/1.0" | getResponse }}
             {{ if eq .Response.StatusCode 200 }}{{ range .JSON.Array "" }}{{ template "line" . }}{{ end }}{{ end }}
           {{ end }}
-          {{ with newRequest "https://api.tfl.gov.uk/line/mode/elizabeth-line/status" | withHeader "User-Agent" "Glance-Dashboard/1.0" | getResponse }}
+          {{ with newRequest "https://api.tfl.gov.uk/line/mode/elizabeth-line/status" | withHeader "User-Agent" "Luna-Dashboard/1.0" | getResponse }}
             {{ if eq .Response.StatusCode 200 }}{{ range .JSON.Array "" }}{{ template "line" . }}{{ end }}{{ end }}
           {{ end }}
-          {{ with newRequest "https://api.tfl.gov.uk/line/mode/overground/status" | withHeader "User-Agent" "Glance-Dashboard/1.0" | getResponse }}
+          {{ with newRequest "https://api.tfl.gov.uk/line/mode/overground/status" | withHeader "User-Agent" "Luna-Dashboard/1.0" | getResponse }}
             {{ if eq .Response.StatusCode 200 }}{{ range .JSON.Array "" }}{{ template "line" . }}{{ end }}{{ end }}
           {{ end }}
         {{ end }}

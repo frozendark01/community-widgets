@@ -27,7 +27,7 @@ A Widget to show current Nginx Proxy Configration, click the subdomain name or t
     code: coder
     paperless: paperlessngx
     docker: docker
-    glance: https://cdn.jsdelivr.net/gh/selfhst/icons/svg/glance-dark.svg
+    Luna: https://cdn.jsdelivr.net/gh/selfhst/icons/svg/Luna-dark.svg
     portainer: portainer
 
   template: |
@@ -195,7 +195,7 @@ options:
   home: homeassistant
   cup: buymeacoffee
   docker: docker
-  glance: https://cdn.jsdelivr.net/gh/selfhst/icons/svg/glance-dark.svg
+  Luna: https://cdn.jsdelivr.net/gh/selfhst/icons/svg/Luna-dark.svg
   portainer: portainer
   proxy: nginxproxymanager
   pve: proxmox

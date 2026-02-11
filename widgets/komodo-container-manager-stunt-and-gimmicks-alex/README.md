@@ -198,7 +198,7 @@ e.g.:
 >  - 'allow-insecure:' is set to 'false' by default for security, however if you use self-signed certificates in your Komodo instance, you will need to change it to 'true' for the API requests to succeed.
 >  - **Expected API Call Volume:** `(1 + N)` total calls per load/refresh, where `N` is your number of servers. Relatively snappy unless you have a lot of servers.
 >  - Cache time is set to 5 minutes, but a value of 1m will be totally fine, given the relatively lightweight API calls made to a local server.
->  - This widget has only been tested with Glance v0.8.4. I can't promise it will work with earlier versions.
+>  - This widget has only been tested with Luna v0.8.4. I can't promise it will work with earlier versions.
 
 
 
@@ -598,14 +598,14 @@ All stacks load with a default old-timey computer icon. If you want to change it
 1. Navigate to the correct stack in your Komodo dashboard
 2. Make sure you're in the `Config` tab and scroll down (or use the side menu) to the `Environment` section.
 3. In Komodo's `Environment` text editor, add `ICON_LINK=https://some.link.to/your-icon-image.svg` (or png, or webp, or jpg, or bmp, I guess)
-e.g.: `ICON_LINK=https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/glance.svg`
+e.g.: `ICON_LINK=https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/Luna.svg`
 4. You can find most common self-hosted app icons at: https://dashboardicons.com/. They're great. Give them a star when you get a second.
 
 > [!NOTE]  
 >  - The Options fields will be auto-set through the environment variables, so you don't need to set anything there.
 >  - 'allow-insecure:' is set to 'false' by default for security, however if you use self-signed certificates in your Komodo instance, you will need to change it to 'true' for the API requests to succeed.
 >  - **Expected API Call Volume:** `1 + (2 x N)` total calls per load/refresh, where `N` is your number of stacks. This can balloon *very* quickly, and there's a pretty hard limit to optimization opportunities with Komodo's current API. This is very much a 'use at your own risk' widget, and if you have a large number of stacks (>20) or a lot of containers per stack, it may crash your client browser (but is unlikely to cause problems for the server -- tests with Komodo running on an i7-6700T saw barely a 5% increase in CPU utilization and no significant memory hit with 50 stacks of 4 containers each). 
->  - This widget has only been tested with Glance v0.8.4. I can't promise it will work with earlier versions.
+>  - This widget has only been tested with Luna v0.8.4. I can't promise it will work with earlier versions.
 
 ### Komodo API Key/Secret Instructions
 1. #### Click 'Settings' in your Komodo dashboard.<img width="1646" height="817" alt="image" src="komodo-api-key-step-1.png" />
@@ -614,6 +614,6 @@ e.g.: `ICON_LINK=https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/gla
 4. #### Copy the API key and secret provided by Komodo<img width="1537" height="823" alt="image" src="komodo-api-key-step-4.png" />
 
 #### Acknowledgements / Thanks
-  - Big thanks to the Glance team for putting together an awesome dashboard project
+  - Big thanks to the Luna team for putting together an awesome dashboard project
   - Thanks to everyone working on Komodo for saving me hundreds of hours of building a worse version of what they already built
-  - And thanks to [@prozn](https://github.com/prozn), who's [Unifi widget](https://github.com/glanceapp/community-widgets/blob/main/widgets/unifi/README.md) was a huge help in both getting the hang of Glance's Custom API Widgets format and is very useful to boot.
+  - And thanks to [@prozn](https://github.com/prozn), who's [Unifi widget](https://github.com/frozendark01/community-widgets/blob/main/widgets/unifi/README.md) was a huge help in both getting the hang of Luna's Custom API Widgets format and is very useful to boot.

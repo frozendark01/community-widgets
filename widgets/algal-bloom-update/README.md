@@ -5,7 +5,7 @@ The bloom has been driven by a mix of factors, including river floodwaters addin
 
 Algal blooms are complex and evolve over time. Scientists are studying this bloom to improve early detection and monitoring.
 
-This Glance` widget displays the latest algal bloom information for a selected beach using data from [Beachsafe](https://beachsafe.org.au).
+This Luna` widget displays the latest algal bloom information for a selected beach using data from [Beachsafe](https://beachsafe.org.au).
 
 ## Features
 

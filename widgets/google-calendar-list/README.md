@@ -111,4 +111,4 @@ You will need to obtain the following values to get the calendar working.
       -d "redirect_uri=http://localhost:8075"
     ```
     2. This is your **GOOGLE_REFRESH_TOKEN**
-    3. Store these values in your .env for Glance
+    3. Store these values in your .env for Luna

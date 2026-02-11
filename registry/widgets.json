@@ -181,7 +181,7 @@
   },
   {
     "title": "Duolingo Stats",
-    "description": "Show your Duolingo stats in glance.",
+    "description": "Show your Duolingo stats in Luna.",
     "author": "RealTong",
     "directory": "duolingo-stats",
     "readme_hash": "c537ee6e19fa80ed6757a2db0bbe8a061dbf0734",
@@ -397,7 +397,7 @@
   },
   {
     "title": "Komodo Container Manager Monitor",
-    "description": "At-a-glance view of stacks and servers managed by Komodo",
+    "description": "At-a-Luna view of stacks and servers managed by Komodo",
     "author": "stunt-and-gimmicks-alex",
     "directory": "komodo-container-manager-stunt-and-gimmicks-alex",
     "readme_hash": "25e7c0e3ab2ae838af7fcc2b969adb84cfaa0057",
@@ -433,7 +433,7 @@
   },
   {
     "title": "Lemmy",
-    "description": "Displays the latest posts from any Lemmy community inside Glance.  It uses the public Lemmy API to fetch posts from a given community and shows the post title, score, comment count, and time since publication",
+    "description": "Displays the latest posts from any Lemmy community inside Luna.  It uses the public Lemmy API to fetch posts from a given community and shows the post title, score, comment count, and time since publication",
     "author": "stonkage",
     "directory": "lemmy",
     "readme_hash": "a86e83b15526b00448e92297b3db06db3e2163e8",

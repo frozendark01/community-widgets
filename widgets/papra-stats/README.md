@@ -1,6 +1,6 @@
 # Papra - Document management platform
 
-A Glance **custom‑api** widget to show stats from the `Papra` application: it displays `documents`, `totalDocuments`, `deletedDocumentCount`, `sizeMB`, and a list of documents with their `name` and `link`.
+A Luna **custom‑api** widget to show stats from the `Papra` application: it displays `documents`, `totalDocuments`, `deletedDocumentCount`, `sizeMB`, and a list of documents with their `name` and `link`.
 
 ![Preview of papra widget](preview.png)
 
