@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-A collection of custom widgets for <a href="https://github.com/glanceapp/glance">Glance</a> made by the<br> community using the <code>custom-api</code> and <code>extension</code> widgets
+A collection of custom widgets for <a href="https://github.com/frozendark01/Luna">Luna</a> made by the<br> community using the <code>custom-api</code> and <code>extension</code> widgets
 </p>
 
 <br>
@@ -44,7 +44,7 @@ A collection of custom widgets for <a href="https://github.com/glanceapp/glance"
 * [Cryptopanic News](widgets/cryptopanic-news/README.md) - a real-time cryptocurrency news widget that displays filtered news from CryptoPanic.com with configurable filters for news type, regions, and currencies (by @herculosh)
 * [Cup Updates](widgets/cup-updates/README.md) - displays information about containers needing an update from Cup (by @panonim)
 * [Docker Swarm](widgets/docker-swarm/README.md) - a widget to monitor Docker Swarm services and nodes based on the built-in docker-containers widget (by @tonineri)
-* [Duolingo Stats](widgets/duolingo-stats/README.md) - show your Duolingo stats in glance (by @RealTong)
+* [Duolingo Stats](widgets/duolingo-stats/README.md) - show your Duolingo stats in Luna (by @RealTong)
 * [ESPN Live Football Scores Widget](widgets/football-livescore/README.md) - a custom widget that displays live, upcoming, and finished football (soccer) scores using the **ESPN Scoreboard API** (by @Beyeshooter)
 * [Epic Games Free Games](widgets/epic-free-widget/README.md) - display currently free games from the Epic Games Store with promotional images and availability periods (by @marocainperdu)
 * [Football Fixtures](widgets/football-fixtures/README.md) - show the last match and the next match of your favourite football team using football-data api (by @cristiandiiorio)
@@ -68,11 +68,11 @@ A collection of custom widgets for <a href="https://github.com/glanceapp/glance"
 * [Karakeep Dashboard](widgets/karakeep-dashboard/README.md) - the widget returns statistics on the number of bookmarks and the number of tags and the most recently added bookmarks (by @razdnut)
 * [Kavita Latest](widgets/kavita-latest/README.md) - show recently updated series and in progress series from your Kavita server (by @Nedra1998)
 * [Komga Recently Added Series](widgets/komga-latest/README.md) - displays recently added comic/manga series to a defined Komga library (by @VictorMitr)
-* [Komodo Container Manager Monitor](widgets/komodo-container-manager-stunt-and-gimmicks-alex/README.md) - at-a-glance view of stacks and servers managed by Komodo (by @stunt-and-gimmicks-alex)
+* [Komodo Container Manager Monitor](widgets/komodo-container-manager-stunt-and-gimmicks-alex/README.md) - at-a-Luna view of stacks and servers managed by Komodo (by @stunt-and-gimmicks-alex)
 * [Last.FM Recent Tracks](widgets/lastfm-recent-tracks/README.md) - show recent tracks scrobbled by a Last.FM user (by @Akasiek)
 * [Latest Community Widgets](widgets/latest-community-widgets/README.md) - show a list of the most recently added community widgets (by @svilenmarkov)
 * [LeetCode Daily Question](widgets/leetcode-daily-question/README.md) - show today leetcode questions with hashtag and difficult (by @hohaithuy)
-* [Lemmy](widgets/lemmy/README.md) - displays the latest posts from any Lemmy community inside Glance.  It uses the public Lemmy API to fetch posts from a given community and shows the post title, score, comment count, and time since publication (by @stonkage)
+* [Lemmy](widgets/lemmy/README.md) - displays the latest posts from any Lemmy community inside Luna.  It uses the public Lemmy API to fetch posts from a given community and shows the post title, score, comment count, and time since publication (by @stonkage)
 * [Linkwarden Latest Bookmarks](widgets/linkwarden-latest-bookmarks/README.md) - show the latest bookmarks from your Linkwarden instance (by @josevictorferreira)
 * [ListenBrainz Listen](widgets/listenbrainz-latest/README.md) - show the latest listen for a ListenBrainz user (by @zliebersbach)
 * [London Tube Status](widgets/london-tube-status/README.md) - show live service status of London tube, overground and Elizabeth lines via the TfL API (by @tomdaly)
@@ -152,24 +152,24 @@ A collection of custom widgets for <a href="https://github.com/glanceapp/glance"
 ## Extension Widgets
 > [!WARNING]
 >
-> Extension widgets are not actively monitored by the maintainers of Glance, use them at your own risk.
-* [GitHub Graph](https://github.com/haondt/glance-github-graph) - show your GitHub contribution graph (by @haondt)
-* [Glance F1](https://github.com/SkyAllinott/glance-F1) - adds user customization to widget by @abaza738 like local timezones, a track map, and more (by @SkyAllinott)
-* [Glance Transmission](https://github.com/Xtrems876/glance-transmission) - show Transmission downloads (by @Xtrems876)
-* [Kubernetes nodes and apps](https://github.com/lukasdietrich/glance-k8s) - list Kubernetes nodes and applications. Also including helm charts (by @lukasdietrich)
+> Extension widgets are not actively monitored by the maintainers of Luna, use them at your own risk.
+* [GitHub Graph](https://github.com/haondt/Luna-github-graph) - show your GitHub contribution graph (by @haondt)
+* [Luna F1](https://github.com/SkyAllinott/Luna-F1) - adds user customization to widget by @abaza738 like local timezones, a track map, and more (by @SkyAllinott)
+* [Luna Transmission](https://github.com/Xtrems876/Luna-transmission) - show Transmission downloads (by @Xtrems876)
+* [Kubernetes nodes and apps](https://github.com/lukasdietrich/Luna-k8s) - list Kubernetes nodes and applications. Also including helm charts (by @lukasdietrich)
 * [Navidrome (Subsonic) Server Stats](https://github.com/SomeCodecat/subsonic-proxy) - display statistics from your Navidrome (or Subsonic) instance and interact with them (by @SomeCodecat)
-* [Restic snapshot](https://github.com/not-first/restic-glance-extension) - show the most recent snapshot(s) and storage stats of a Restic repository (by @not-first)
+* [Restic snapshot](https://github.com/not-first/restic-Luna-extension) - show the most recent snapshot(s) and storage stats of a Restic repository (by @not-first)
 * [Swedish Hockey API](https://github.com/GSHimself/hockey-api) - shows results and next games from Swedish HockeyAllsvenskan (by @gshimself)
-* [iCal (ICS) Calendar List](https://github.com/AWildLeon/Glance-iCal-Events) - list a ICS File's upcoming events (Like Google Calendar List) (by @AWildLeon)
+* [iCal (ICS) Calendar List](https://github.com/AWildLeon/Luna-iCal-Events) - list a ICS File's upcoming events (Like Google Calendar List) (by @AWildLeon)
 * [linktiles](https://github.com/haondt/linktiles/) - display your linkding bookmarks in a configurable mosaic (by @haondt)
 * [qBittorrent Statistic](https://github.com/Panonim/qbwrapper) - display file statistics as they are being downloaded (by @panonim)
 
 <br>
 
 ## How to use
-For simpler widgets you can simply copy their code into your `glance.yml` as you would with any other widget, then add environment variables for any URL's and API keys if necessary.
+For simpler widgets you can simply copy their code into your `Luna.yml` as you would with any other widget, then add environment variables for any URL's and API keys if necessary.
 
-For more complex widgets that span across hundreds of lines, it may be trickier to get their indentation right, so it's easier to place them in a separate `yml` file, configure them there, then include that file in your `glance.yml` like such:
+For more complex widgets that span across hundreds of lines, it may be trickier to get their indentation right, so it's easier to place them in a separate `yml` file, configure them there, then include that file in your `Luna.yml` like such:
 
 ```yml
 widgets:
@@ -182,7 +182,7 @@ widgets:
 <details>
 <summary><strong>Are the widgets maintained?</strong></summary>
 
-The maintainers of Glance are not responsible for the maintenance of these widgets. Instead, the author of each widget is responsible for maintaining and responding to issues and pull requests related to that widget.
+The maintainers of Luna are not responsible for the maintenance of these widgets. Instead, the author of each widget is responsible for maintaining and responding to issues and pull requests related to that widget.
 </details>
 
 <details>
@@ -194,5 +194,5 @@ Custom API widgets are much easier to setup and usually only require a copy-past
 <details>
 <summary><strong>Are the widgets safe to use?</strong></summary>
 
-The `custom-api` widgets in this repository have been vetted by the maintainers of Glance so they are safe to use, however they may still have bugs, be visually inconsistent with the rest of Glance, or in some cases have poor performance.
+The `custom-api` widgets in this repository have been vetted by the maintainers of Luna so they are safe to use, however they may still have bugs, be visually inconsistent with the rest of Luna, or in some cases have poor performance.
 </details>
